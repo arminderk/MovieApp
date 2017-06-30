@@ -1,53 +1,27 @@
-<html>
-  
-  <head>
-    <title>Movie Show</title>
-    <meta charset="utf-8">
-    
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  </head>
-  
-  <body>
-    
-    <div class="container">
-      
-      <div class="page-header">
-        <h1>Show Movie</h1>
-      </div>
+<% @page_title = "Show" %>
+<% @page_header = "Show Movie" %>
 
-      <table class="table table-bordered table-responsive">
-          <tr>
-            <th>Name</th>
-            <td><%= @movie.name %></td>
-          </tr>
-          <tr>
-            <th>Rated</th>
-            <td><%= @movie.rated %></td>
-          </tr>
-          <tr>
-            <th>Created At</th>
-            <td><%= @movie.created_at %></td>
-          </tr>
-          <tr>
-            <th>Updated At</th>
-            <td><%= @movie.updated_at %></td>
-          </tr>
-          <tr>
-            <th>Theater</th>
-            <td></td>
-          </tr>
-      </table><br>
-      
-      <%= link_to("Back to Index", {:action => 'index'}, :class => 'back-index') %>
-      
-    </div>
-  
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js"   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="   crossorigin="anonymous"></script>
+<table class="table table-bordered table-responsive">
+    <tr>
+      <th>Name</th>
+      <td><%= @movie.name %></td>
+    </tr>
+    <tr>
+      <th>Rated</th>
+      <td><%= @movie.rated %></td>
+    </tr>
+    <tr>
+      <th>Created At</th>
+      <td><%= @movie.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated At</th>
+      <td><%= @movie.updated_at %></td>
+    </tr>
+    <tr>
+      <th>Theater</th>
+      <td></td>
+    </tr>
+</table><br>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  
-  </body>
-</html>
+<%= link_to("Back to Index", {:action => 'index'}, :class => 'back-index') %>
