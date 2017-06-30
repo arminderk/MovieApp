@@ -17,7 +17,7 @@
       <th scope="row"><%= index + 1 %></th>
       <td><%= movie.name %></td>
       <td><%= movie.rated %></td>
-      <td><%= movie.theatres.size%></td>
+      <td><%= movie.theatres.size %></td>
       <td class="actions">
         <%= link_to("Show", {:action => 'show', :id => movie.id}, :class => 'action show') %>
         <%= link_to("Edit", {:action => 'edit', :id => movie.id}, :class => 'action edit') %>

@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   
-  layout "bootstrap"
+  layout "movieBootstrap"
   
   def index
     @movies = Movie.order(:name)

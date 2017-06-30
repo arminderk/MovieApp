@@ -1,5 +1,24 @@
 # README
-Ruby Version: 2.4.0
-Rails Version: 5.1.1
 
-This basic CRUD app features movies, in which the user is able to see, create, update, and delete movies of their choice. It also features theaters in which a user can see the movies playing in each theater. 
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
