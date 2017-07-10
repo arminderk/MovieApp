@@ -3,14 +3,7 @@
       
 <%= form_for(:movie, :url => ({:action => 'update', :id => @movie.id})) do |t| %>
 
-  <div class="form-group">
-    <label>Name</label>
-    <%= t.text_field(:name, :class => "form-control", :placeholder => "Name") %>
-  </div>
-  <div class="form-group">
-    <label>Rated</label>
-    <%= t.text_field(:rated, :class => "form-control", :placeholder => "Rated") %>
-  </div>
+  <%= render(:partial => 'form', :locals => {:t => t}) %>
 
   <%= t.submit("Submit Movie", :class => 'btn btn-success') %><br><br>
 

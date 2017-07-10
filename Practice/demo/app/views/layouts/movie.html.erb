@@ -1,7 +1,8 @@
+<!DOCTYPE html> 
 <html>
   
   <head>
-    <title>Show | <%= @show_title %></title>
+    <title>Movie | <%= @page_title %></title>
     <meta charset="utf-8">
     
     <!-- Latest compiled and minified CSS -->
@@ -13,7 +14,7 @@
     <div class="container">
       
       <div class="page-header">
-        <h1><%= @show_header || "Show" %></h1>
+        <h1><%= @page_header || "Movie" %></h1>
       </div>
       
       <%= yield %>

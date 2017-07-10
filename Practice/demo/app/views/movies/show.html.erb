@@ -11,6 +11,14 @@
       <td><%= @movie.rated %></td>
     </tr>
     <tr>
+      <th>Description</th>
+      <td><%= @movie.description %></td>
+    </tr>
+    <tr>
+      <th>Number of Theatres Movie is Playing In </th>
+      <td><%= @movie.theatres.size %> </td>
+    </tr>
+    <tr>
       <th>Created At</th>
       <td><%= @movie.created_at %></td>
     </tr>
@@ -18,10 +26,7 @@
       <th>Updated At</th>
       <td><%= @movie.updated_at %></td>
     </tr>
-    <tr>
-      <th>Number of Theatres Movie is Playing In </th>
-      <td><%= @movie.theatres.size %> </td>
-    </tr>
+    
 </table><br>
 
 <%= link_to("Back to Index", {:action => 'index'}, :class => 'back-index') %>

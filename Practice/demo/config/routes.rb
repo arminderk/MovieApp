@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-
-  root 'new#index'
+  
+  root 'movies#index'
   #get 'new/index'
   
   match ':controller(/:action(:/id))', :via => [:get, :post]

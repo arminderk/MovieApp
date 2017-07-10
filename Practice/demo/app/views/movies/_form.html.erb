@@ -1,0 +1,12 @@
+<div class="form-group">
+  <label><%= t.label(:name, "Name") %></label>
+  <%= t.text_field(:name, :class => "form-control", :placeholder => "Name") %>
+</div>
+<div class="form-group">
+  <label><%= t.label(:rated) %></label><br>
+  <%= t.select(:rated, [['G'], ['PG'], ['PG-13'], ['R']], :class => "form-control") %>
+</div>
+<div class="form-group">
+  <label><%= t.label(:description) %></label>
+  <%= t.text_area(:description, :class => "form-control", :placeholder => "Description", :size => '30x10') %>
+</div>

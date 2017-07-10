@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   
-  layout "movieBootstrap"
+  layout "movie"
   
   def index
     @movies = Movie.order(:name)
@@ -55,6 +55,6 @@ class MoviesController < ApplicationController
   
   private
     def movie_params
-      params.require(:movie).permit(:name, :rated)
+      params.require(:movie).permit(:name, :rated, :description)
     end
 end
