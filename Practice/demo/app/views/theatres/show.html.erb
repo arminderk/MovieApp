@@ -1,2 +1,24 @@
-<h1>Theatres#show</h1>
-<p>Find me in app/views/theatres/show.html.erb</p>
+<% @page_title = "Show" %>
+<% @page_header = "Show Theater" %>
+
+<table class="table table-bordered table-responsive">
+    <tr>
+      <th>Name</th>
+      <td><%= @theater.name %></td>
+    </tr>
+    <tr>
+      <th>Price</th>
+      <td><%= @theater.price%></td>
+    </tr>
+    <tr>
+      <th>Created At</th>
+      <td><%= @theater.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated At</th>
+      <td><%= @theater.updated_at %></td>
+    </tr>
+    
+</table><br>
+
+<%= link_to("Back to Index", {:action => 'index'}, :class => 'back-index') %>
