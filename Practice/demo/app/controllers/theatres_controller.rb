@@ -41,12 +41,12 @@ class TheatresController < ApplicationController
   end
   
   def destroy
-    theater = Theater.find(params[:id]).destroy
+    theater = Theatre.find(params[:id]).destroy
     redirect_to(:action => 'index')
   end
   
   private
     def theater_params
-      params.require(:theatre).permit(:name, :price)
+      params.require(:theater).permit(:name, :price)
     end
 end

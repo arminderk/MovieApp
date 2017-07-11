@@ -39,7 +39,8 @@ ActiveRecord::Schema.define(version: 20170627200036) do
 
   create_table "theatres", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
-    t.decimal "price", precision: 10
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "USD", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
