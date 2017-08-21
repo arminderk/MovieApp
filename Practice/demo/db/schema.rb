@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20170627200036) do
   create_table "movies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "rated"
-    t.string "description", limit: 45
+    t.string "description", limit: 150
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

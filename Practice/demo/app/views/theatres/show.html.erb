@@ -8,7 +8,15 @@
     </tr>
     <tr>
       <th>Price</th>
-      <td><%= @theater.price%></td>
+      <td><%= @theater.price %></td>
+    </tr>
+    <tr>
+      <th>Now Playing</th>
+      <td>
+        <% @movies.each do |movie| %>
+          <h6><%= movie.name %></h6>
+        <% end %>
+      </td>
     </tr>
     <tr>
       <th>Created At</th>

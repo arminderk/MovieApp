@@ -3,7 +3,7 @@ class CreateMovies < ActiveRecord::Migration[5.1]
     create_table :movies do |t|
       t.string "name"
       t.string "rated"
-      t.string "description", :limit => 45
+      t.string "description", :limit => 150
 
       t.timestamps
     end
