@@ -7,6 +7,18 @@
   <%= t.select(:rated, [['G'], ['PG'], ['PG-13'], ['R']], :class => "form-control") %>
 </div>
 <div class="form-group">
+  <label><%= t.label(:genre, "Genre") %></label>
+  <%= t.text_field(:genre, :class => "form-control", :placeholder => "Genre") %>
+</div>
+<div class="form-group">
+  <label><%= t.label(:year) %></label><br>
+  <%= t.number_field :year, value: 1940, class: "form-control", min: 1940, max: 2017 %>
+</div>
+<div class="form-group">
+  <label><%= t.label(:director, "Director") %></label>
+  <%= t.text_field(:director, :class => "form-control", :placeholder => "Director") %>
+</div>
+<div class="form-group">
   <label><%= t.label(:description) %></label>
   <%= t.text_area(:description, :class => "form-control", :placeholder => "Description", :size => '30x10') %>
 </div>
