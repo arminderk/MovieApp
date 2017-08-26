@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170627200036) do
   create_table "show_times", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "movie_id"
     t.integer "theatre_id"
+    t.datetime "datetime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["movie_id", "theatre_id"], name: "index_show_times_on_movie_id_and_theatre_id"
