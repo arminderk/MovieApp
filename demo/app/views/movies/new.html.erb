@@ -1,0 +1,12 @@
+<% @page_title = "New" %>
+<% @page_header = "Create Movie" %>
+      
+<%= form_for(:movie, :url => ({:action => 'create'})) do |t| %>
+
+  <%= render(:partial => 'form', :locals => {:t => t}) %>
+
+  <%= t.submit("Submit Movie", :class => 'btn btn-success') %><br><br>
+
+  <%= link_to("Back to Index", {:action => 'index'}, :class => 'back-index') %>
+
+<% end %>

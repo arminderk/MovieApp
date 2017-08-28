@@ -1,0 +1,14 @@
+<% @page_title = "Edit" %>
+<% @page_header = "Update Theater" %>
+      
+<%= form_for(:theater, :url => ({:action => 'update', :id => @theater.id})) do |t| %>
+
+  <%= render(:partial => 'form', :locals => {:t => t}) %>
+
+  <%= t.submit("Submit Theater", :class => 'btn btn-success') %><br><br>
+
+  <%= link_to("Back to Index", {:action => 'index'}, :class => 'back-index') %>
+
+
+<% end %>
+

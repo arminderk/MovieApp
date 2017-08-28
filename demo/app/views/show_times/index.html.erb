@@ -1,0 +1,24 @@
+<% @page_title = "Index" %>
+<% @page_header = "Show Times" %>
+
+<table class="table table-bordered table-responsive">
+  <thead>
+    <th>#</th>
+    <th>Movie</th>
+    <th>Theater</th>
+    <th>Show Date and Time</th>
+  </thead>
+  <tbody>
+    <% @showtimes.each_with_index do |showtime, index| %>
+    <tr>
+      <th scope="row"><%= index + 1 %></th>
+      <td><%= showtime.movie.name %></td>
+      <td><%= showtime.theatre.name %></td>
+      <td><%= showtime.datetime.strftime("Date: %B %d, Time: %I:%M %p") %></td>
+    </tr>
+    <% end %>
+  
+  </tbody>
+</table><br>
+
+<%= link_to("Back to Movies", {:controller => 'movies', :action => 'index'}) %>

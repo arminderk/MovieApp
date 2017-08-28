@@ -1,0 +1,37 @@
+<% @page_title = "Index" %>
+<% @page_header = "Theaters" %>
+
+<table class="table table-bordered table-responsive">
+  <thead>
+    <tr class="bg-primary">
+      <th>#</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Movies</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @theaters.each_with_index  do |theater, index| %>
+    <tr>
+      <th scope="row"><%= index + 1 %></th>
+      <td><%= theater.name %></td>
+      <td><%= number_to_currency(theater.price) %></td>
+      <td><%= theater.movies.size %></td>
+      <td class="actions">
+        <%= link_to("Show", {:action => 'show', :id => theater.id}, :class => 'action show') %>
+        <%= link_to("Edit", {:action => 'edit', :id => theater.id}, :class => 'action edit') %>
+        <%= link_to("Delete", {:action => 'delete', :id => theater.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table><br>
+
+<%= link_to("<button type='button' class='btn btn-info'>Add New Theater</button>".html_safe, {:action => 'new'}, :class => 'action new') %>
+
+<br><br>
+
+<%= link_to("Back to Movies", {:controller => 'movies', :action => 'index'}) %>
+
+

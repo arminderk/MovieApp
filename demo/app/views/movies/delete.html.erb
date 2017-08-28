@@ -1,0 +1,13 @@
+<% @page_title = "Delete" %>
+<% @page_header = "Delete Movie" %>
+      
+<%= form_for(:movie, :url => ({:action => 'destroy', :id => @movie.id})) do |t| %>
+
+<h4 class="text-danger">Are you sure you want to delete movie: <%= @movie.name %>?</h4><br>
+
+  <%= t.submit("Delete Movie", :class => 'btn btn-success') %><br><br>
+
+  <%= link_to("Back to Index", {:action => 'index'}, :class => 'back-index') %>
+
+<% end %>
+

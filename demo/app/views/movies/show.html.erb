@@ -1,0 +1,44 @@
+<% @page_title = "Show" %>
+<% @page_header = "Show Movie" %>
+
+<table class="table table-bordered table-responsive">
+    <tr>
+      <th>Name</th>
+      <td><%= @movie.name %></td>
+    </tr>
+    <tr>
+      <th>Rated</th>
+      <td><%= @movie.rated %></td>
+    </tr>
+    <tr>
+      <th>Genre</th>
+      <td><%= @movie.genre %></td>
+    </tr>
+    <tr>
+      <th>Year</th>
+      <td><%= @movie.year %></td>
+    </tr>
+    <tr>
+      <th>Director</th>
+      <td><%= @movie.director %></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><%= @movie.description %></td>
+    </tr>
+    <tr>
+      <th>Number of Theatres Movie is Playing In </th>
+      <td><%= @movie.theatres.size %> </td>
+    </tr>
+    <tr>
+      <th>Created At</th>
+      <td><%= @movie.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated At</th>
+      <td><%= @movie.updated_at %></td>
+    </tr>
+    
+</table><br>
+
+<%= link_to("Back to Index", {:action => 'index'}, :class => 'back-index') %>
