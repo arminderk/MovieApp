@@ -1,6 +1,12 @@
 <% @page_title = "Index" %>
 <% @page_header = "Movies" %>
 
+<br>
+
+<%= link_to("Add New Movie", {:action => 'new'}, :class => 'btn btn-success') %>
+
+<br><br><br>
+
 <table class="table table-bordered table-responsive">
   <thead>
     <tr class="bg-primary">
@@ -28,13 +34,7 @@
   </tbody>
 </table><br>
 
-<%= link_to("Add New Movie", {:action => 'new'}, :class => 'btn btn-primary') %>
-
-<br><br>
-
-<%= link_to('Go To Theatres', {controller: 'theatres', action: 'index'}, :class => 'btn btn-success') %>
-
-<br><br>
+<%= link_to('Go To Theatres', {controller: 'theatres', action: 'index'}, :class => 'btn btn-danger') %>
 
 <%= link_to("Go to Show Times", {:controller => 'show_times', :action => 'index'}, :class => 'btn btn-info') %>
 
