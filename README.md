@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* This is a Ruby on Rails app which was developed to get used to the framework and understand the CRUD concept.
 
-Things you may want to cover:
+* It features a Movie model, controller, and views which allows users to view, add, edit, and delete movies.
 
-* Ruby version
+* The app also allows users to view, add, edit, and delete theaters where the movies will be played
 
-* System dependencies
+* Last but not least, the movies and theaters are connected by a ShowTime join which allows movies to be added to theaters, and show what date and time a specific movie will be played.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
