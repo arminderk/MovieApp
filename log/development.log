@@ -5170,3 +5170,7 @@ DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated an
   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` LIMIT 11[0m
   [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 4 LIMIT 1[0m
   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 4 LIMIT 11[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:14)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:14)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:6)
