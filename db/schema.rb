@@ -14,6 +14,9 @@ ActiveRecord::Schema.define(version: 20170901174428) do
 
   create_table "comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "movie_id"
+    t.string "title"
+    t.string "name"
+    t.string "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["movie_id"], name: "index_comments_on_movie_id"
