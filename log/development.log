@@ -5778,3 +5778,496 @@ Processing by MoviesController#show as HTML
 Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 1.3ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+Started GET "/" for ::1 at 2017-09-03 10:24:51 -0700
+  [1m[35m (29.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (24.5ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (30.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 1[0m
+  Rendered movies/index.html.erb within layouts/movie (227.5ms)
+Completed 200 OK in 265ms (Views: 156.8ms | ActiveRecord: 88.7ms)
+
+
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 10:25:01 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (2.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (83.3ms)
+Completed 200 OK in 134ms (Views: 83.2ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/" for ::1 at 2017-09-03 10:25:06 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 1[0m
+  Rendered movies/index.html.erb within layouts/movie (8.7ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 10:25:12 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (9.5ms)
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 10:37:16 -0700
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (35.9ms)
+Completed 200 OK in 89ms (Views: 40.7ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/comments/create:/id" for ::1 at 2017-09-03 10:38:15 -0700
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NPD89zQiDZvvSUJn36xwtcZYh5j/Rn5O0UUgZEBQEnSaicmBKJJfQR7+8vlDSsUD3PVqUtBuRE7C4/talLzRjg==", "comment"=>{"title"=>"Deadpool Review", "name"=>"Bob Smith", "comment"=>"A great movie!"}, "commit"=>"Add Comment"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `allow' for #<ActionController::Parameters:0x007f8914ea3f68>):
+  
+app/controllers/comments_controller.rb:11:in `comment_params'
+app/controllers/comments_controller.rb:4:in `create'
+Started GET "/" for ::1 at 2017-09-03 10:38:34 -0700
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 1[0m
+  Rendered movies/index.html.erb within layouts/movie (42.0ms)
+Completed 200 OK in 58ms (Views: 47.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2017-09-03 10:38:35 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 1[0m
+  Rendered movies/index.html.erb within layouts/movie (14.9ms)
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 10:38:37 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (9.5ms)
+Completed 200 OK in 33ms (Views: 11.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/comments/create:/id" for ::1 at 2017-09-03 10:38:46 -0700
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QYlUoC6eCZOWJcwZnageFPVtV+Cy+XvDNXoVWLW+HlXv8GHWMi5bSWeSfIcBTqui78C6Kp3RQcMm3M5mYVLdrw==", "comment"=>{"title"=>"Deadpool Review", "name"=>"", "comment"=>""}, "commit"=>"Add Comment"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering comments/create.html.erb within layouts/application
+  Rendered comments/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 4.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/comments/create:/id" for ::1 at 2017-09-03 10:40:33 -0700
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QYlUoC6eCZOWJcwZnageFPVtV+Cy+XvDNXoVWLW+HlXv8GHWMi5bSWeSfIcBTqui78C6Kp3RQcMm3M5mYVLdrw==", "comment"=>{"title"=>"Deadpool Review", "name"=>"Bob Smith", "comment"=>"A great movie!"}, "commit"=>"Add Comment"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering comments/create.html.erb within layouts/application
+  Rendered comments/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 4.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2017-09-03 10:41:45 -0700
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 1[0m
+  Rendered movies/index.html.erb within layouts/movie (48.3ms)
+Completed 200 OK in 60ms (Views: 47.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2017-09-03 10:41:45 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 1[0m
+  Rendered movies/index.html.erb within layouts/movie (9.7ms)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/show_times" for ::1 at 2017-09-03 10:41:47 -0700
+Processing by ShowTimesController#index as HTML
+  Rendering show_times/index.html.erb within layouts/movie
+  [1m[36mShowTime Load (0.5ms)[0m  [1m[34mSELECT `show_times`.* FROM `show_times`[0m
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 1 LIMIT 1[0m
+  [1m[36mTheatre Load (0.5ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 1 LIMIT 1[0m
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE Theatre Load (0.0ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTheatre Load (0.4ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 2 LIMIT 1[0m
+  Rendered show_times/index.html.erb within layouts/movie (34.3ms)
+Completed 200 OK in 45ms (Views: 37.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2017-09-03 10:41:48 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 1[0m
+  Rendered movies/index.html.erb within layouts/movie (8.6ms)
+Completed 200 OK in 14ms (Views: 10.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 10:41:49 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (8.7ms)
+Completed 200 OK in 25ms (Views: 10.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 10:48:00 -0700
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (20.2ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    55:   <h4>Add Comment</h4>
+    56: </div>
+    57: 
+    58: <%= form_for(@comment, comments_path) do |t| %>
+    59:   <div class="form-group">
+    60:     <%= t.label(:title) %>
+    61:     <%= t.text_field(:title, :class => 'form-control', :placeholder => 'Title') %>
+  
+app/views/movies/show.html.erb:58:in `_app_views_movies_show_html_erb___3377567235426964103_70113382553540'
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 10:48:13 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (6.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    55:   <h4>Add Comment</h4>
+    56: </div>
+    57: 
+    58: <%= form_for(@comment, comments_path()) do |t| %>
+    59:   <div class="form-group">
+    60:     <%= t.label(:title) %>
+    61:     <%= t.text_field(:title, :class => 'form-control', :placeholder => 'Title') %>
+  
+app/views/movies/show.html.erb:58:in `_app_views_movies_show_html_erb___3377567235426964103_70113380026160'
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 10:49:10 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (7.2ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    55:   <h4>Add Comment</h4>
+    56: </div>
+    57: 
+    58: <%= form_for(@comment, comments_path) do |t| %>
+    59:   <div class="form-group">
+    60:     <%= t.label(:title) %>
+    61:     <%= t.text_field(:title, :class => 'form-control', :placeholder => 'Title') %>
+  
+app/views/movies/show.html.erb:58:in `_app_views_movies_show_html_erb___3377567235426964103_70113381896800'
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 10:52:02 -0700
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (24.3ms)
+Completed 200 OK in 54ms (Views: 26.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/comments/create:/id" for ::1 at 2017-09-03 10:52:27 -0700
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L/OkTNiqS4j4lC0fZBKQIIupLkcVxmTXXMYeJpffX9eBipE6xBoZUgkjnYH49CWWkQTDjTruXtdPYMUYQzOcLQ==", "comment"=>{"title"=>"Deadpool Movie Review", "name"=>"Bob Smith", "comment"=>"A great movie!"}, "commit"=>"Add Comment"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-09-03 10:52:27 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 1[0m
+  Rendered movies/index.html.erb within layouts/movie (9.6ms)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 1.3ms)
+
+
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+Started GET "/" for ::1 at 2017-09-03 10:54:28 -0700
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 1[0m
+  Rendered movies/index.html.erb within layouts/movie (37.9ms)
+Completed 200 OK in 65ms (Views: 43.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 10:54:31 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (13.7ms)
+Completed 200 OK in 43ms (Views: 17.1ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/comments/create:/id" for ::1 at 2017-09-03 10:54:54 -0700
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3vIrFrowxMP4ZJHOJ45OS75h8oVvI6LvztzWSKns5Ftwix5gpoCWGQnTIVC7aPv9pMwfT0ALmO/deg12fQAnoQ==", "comment"=>{"title"=>"Deadpool Movie Review", "name"=>"Bob Smith", "comment"=>"A great movie!"}, "commit"=>"Add Comment"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = NULL LIMIT 1[0m
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=):
+  
+app/controllers/comments_controller.rb:5:in `create'
+Started GET "/" for ::1 at 2017-09-03 10:58:10 -0700
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 1[0m
+  Rendered movies/index.html.erb within layouts/movie (36.5ms)
+Completed 200 OK in 50ms (Views: 38.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2017-09-03 10:58:11 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 1[0m
+  Rendered movies/index.html.erb within layouts/movie (10.1ms)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 10:58:14 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (13.5ms)
+Completed 200 OK in 39ms (Views: 16.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/comments/create:/id" for ::1 at 2017-09-03 10:58:38 -0700
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qHBC6avT+Nm3GGTWVGslCE5MarrljRQ3lFMCkQ+scpEGCXeft2OqA0av1EjIjZC+VOGHcMqlLjeH9dmv20Cxaw==", "comment"=>{"title"=>"Deadpool Movie Review", "name"=>"Bob Smith", "comment"=>"A great movie!", "movie_id"=>"2"}, "commit"=>"Add Comment"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (78.7ms)[0m  [1m[32mINSERT INTO `comments` (`movie_id`, `title`, `name`, `comment`, `created_at`, `updated_at`) VALUES (2, 'Deadpool Movie Review', 'Bob Smith', 'A great movie!', '2017-09-03 17:58:38', '2017-09-03 17:58:38')[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/movies/show:/id
+Completed 302 Found in 101ms (ActiveRecord: 90.9ms)
+
+
+Started GET "/movies/show:/id" for ::1 at 2017-09-03 10:58:38 -0700
+Processing by MoviesController#show as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = NULL LIMIT 1[0m
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=):
+  
+app/controllers/movies_controller.rb:10:in `show'
+Started GET "/" for ::1 at 2017-09-03 10:59:38 -0700
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 1[0m
+  Rendered movies/index.html.erb within layouts/movie (30.7ms)
+Completed 200 OK in 42ms (Views: 33.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 10:59:39 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (2.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (12.6ms)
+Completed 200 OK in 31ms (Views: 12.7ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/comments/create:/id" for ::1 at 2017-09-03 11:01:07 -0700
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wW7Ez2z9tQmE5ZrtLrY96oJEDxbDXvmYIqpxTjM6H1JvF/G5cE3n03VSKnOyUIhcmOni3Ox2w5gxDKpw59bcqA==", "comment"=>{"title"=>"Deadpool", "name"=>"Tom ", "comment"=>"It's ok", "movie_id"=>"2"}, "commit"=>"Add Comment"}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `comments` (`movie_id`, `title`, `name`, `comment`, `created_at`, `updated_at`) VALUES (2, 'Deadpool', 'Tom ', 'It\'s ok', '2017-09-03 18:01:07', '2017-09-03 18:01:07')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/movies/show:/id?id=movie_id
+Completed 302 Found in 38ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/movies/show:/id?id=movie_id" for ::1 at 2017-09-03 11:01:07 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"movie_id"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 0 LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=movie_id):
+  
+app/controllers/movies_controller.rb:10:in `show'
+Started GET "/" for ::1 at 2017-09-03 11:03:02 -0700
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/ArminderSingh/Desktop/CRUDMovieApp/config/routes.rb:6)
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 1[0m
+  Rendered movies/index.html.erb within layouts/movie (35.9ms)
+Completed 200 OK in 47ms (Views: 34.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 11:03:04 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (11.2ms)
+Completed 200 OK in 27ms (Views: 12.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/comments/create:/id" for ::1 at 2017-09-03 11:03:28 -0700
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b7TFLCk2Q/YdUGzz0PJRthPe340eeFXk53js/wriX+zBzfBaNYYRLOzn3G1MFOQACXMyRzFQb+T03jfB3g6cFg==", "comment"=>{"title"=>"Review", "name"=>"Jim", "comment"=>"Really funny!", "movie_id"=>"2"}, "commit"=>"Add Comment"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `comments` (`movie_id`, `title`, `name`, `comment`, `created_at`, `updated_at`) VALUES (2, 'Review', 'Jim', 'Really funny!', '2017-09-03 18:03:29', '2017-09-03 18:03:29')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+Redirected to http://localhost:3000/movies/show:/id?id=2
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 11:03:29 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (7.7ms)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 11:04:12 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (9.0ms)
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/movies/show:/id?id=2" for ::1 at 2017-09-03 11:04:38 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 2 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 2[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 2[0m
+  Rendered movies/show.html.erb within layouts/movie (7.5ms)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 1.2ms)
+
+
