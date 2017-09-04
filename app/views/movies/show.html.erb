@@ -46,10 +46,12 @@
 </div>
 
 <% @comments.each do |comment| %>
-  <h3>Title: <%= comment.title %></h3>
+  <h4>Title: <%= comment.title %></h4>
   <p>By: <%= comment.name %></p>
   <p>Comment: <%= comment.comment %></p>
 <% end %>
+
+<br><br>
 
 <div class="page-header">
   <h4>Add Comment</h4>
