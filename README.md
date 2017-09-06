@@ -4,7 +4,9 @@
 
 * It features a Movie model, controller, and views which allows users to view, add, edit, and delete movies.
 
-* The app also allows users to view, add, edit, and delete theaters where the movies will be played
+* The app also features a Theatre Model which allows users to view, add, edit, and delete theaters 
 
-* Last but not least, the movies and theaters are connected by a ShowTime join which allows movies to be added to theaters, and show what date and time a specific movie will be played.
+* The movies and theaters are connected by a ShowTime join which allows movies to be added to theaters, and show what date and time a specific movie will be played.
+
+* Lastly, the app features a Comment model and controller which allow users to add a comment in movies/show
 
