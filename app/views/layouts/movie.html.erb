@@ -27,7 +27,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse-3">
           <ul class="nav navbar-nav navbar-left">
-            <li><a href="#">Home</a></li>
+            <li><%= link_to('Home', root_path) %></li>
             <li><%= link_to('Theaters', {controller: 'theatres', action: 'index'}) %></li>
             <li><%= link_to("ShowTimes", {:controller => 'show_times', :action => 'index'}) %></li>
           </ul>
@@ -76,6 +76,8 @@
       </div>
       
       <%= yield %>
+      
+      <br><br>
       
     </div>
   

@@ -1,6 +1,6 @@
 class TheatresController < ApplicationController
   
-  layout "theater"
+  layout "movie"
   
   def index
     @theaters = Theatre.order(:name)

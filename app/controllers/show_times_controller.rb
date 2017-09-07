@@ -1,6 +1,6 @@
 class ShowTimesController < ApplicationController
   
-  layout "showtime"
+  layout "movie"
   
   def index
     @showtimes = ShowTime.all

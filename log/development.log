@@ -8090,3 +8090,689 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 1.3ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:6)
+Started GET "/" for ::1 at 2017-09-07 11:53:47 -0700
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (49.4ms)
+Completed 200 OK in 241ms (Views: 229.4ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:54:01 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (9.6ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:54:41 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (8.6ms)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/show:/id?id=4" for ::1 at 2017-09-07 11:54:48 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 4 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 4[0m
+  Rendered movies/show.html.erb within layouts/movie (44.8ms)
+Completed 200 OK in 76ms (Views: 50.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:54:51 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (16.9ms)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies/edit:/id?id=4" for ::1 at 2017-09-07 11:54:53 -0700
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 4 LIMIT 1[0m
+  Rendering movies/edit.html.erb within layouts/movie
+  Rendered movies/_form.html.erb (3.9ms)
+  Rendered movies/edit.html.erb within layouts/movie (6.5ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:54:55 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (7.5ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/delete:/id?id=4" for ::1 at 2017-09-07 11:54:57 -0700
+Processing by MoviesController#delete as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 4 LIMIT 1[0m
+  Rendering movies/delete.html.erb within layouts/movie
+  Rendered movies/delete.html.erb within layouts/movie (1.4ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:54:59 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (7.6ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 11:55:03 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/theater
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/theater (19.4ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/theatres/show:/id?id=2" for ::1 at 2017-09-07 11:55:06 -0700
+Processing by TheatresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 2 LIMIT 1[0m
+  Rendering theatres/show.html.erb within layouts/theater
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  Rendered theatres/show.html.erb within layouts/theater (2.9ms)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 11:55:07 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/theater
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/theater (6.8ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/theatres/edit:/id?id=2" for ::1 at 2017-09-07 11:55:08 -0700
+Processing by TheatresController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 2 LIMIT 1[0m
+  Rendering theatres/edit.html.erb within layouts/theater
+  Rendered theatres/_form.html.erb (1.6ms)
+  Rendered theatres/edit.html.erb within layouts/theater (4.2ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 11:55:10 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/theater
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/theater (6.5ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:55:14 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (7.5ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies/show:/id?id=4" for ::1 at 2017-09-07 11:55:18 -0700
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 4 LIMIT 1[0m
+  Rendering movies/show.html.erb within layouts/movie
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`movie_id` = 4[0m
+  Rendered movies/show.html.erb within layouts/movie (6.1ms)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:55:22 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (7.6ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/show_times" for ::1 at 2017-09-07 11:55:35 -0700
+Processing by ShowTimesController#index as HTML
+  Rendering show_times/index.html.erb within layouts/showtime
+  [1m[36mShowTime Load (0.3ms)[0m  [1m[34mSELECT `show_times`.* FROM `show_times`[0m
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 4 LIMIT 1[0m
+  [1m[36mTheatre Load (0.2ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 2 LIMIT 1[0m
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 5 LIMIT 1[0m
+  [1m[36mTheatre Load (0.2ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 3 LIMIT 1[0m
+  Rendered show_times/index.html.erb within layouts/showtime (14.1ms)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:55:41 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (7.5ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 11:55:42 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/theater
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/theater (6.6ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:55:53 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (8.3ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 11:56:14 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/theater
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/theater (6.7ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:56:16 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (7.7ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:57:10 -0700
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:6)
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (24.1ms)
+Completed 200 OK in 34ms (Views: 27.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/show_times" for ::1 at 2017-09-07 11:57:12 -0700
+Processing by ShowTimesController#index as HTML
+  Rendering show_times/index.html.erb within layouts/showtime
+  [1m[36mShowTime Load (0.3ms)[0m  [1m[34mSELECT `show_times`.* FROM `show_times`[0m
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 4 LIMIT 1[0m
+  [1m[36mTheatre Load (0.2ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 2 LIMIT 1[0m
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 5 LIMIT 1[0m
+  [1m[36mTheatre Load (0.2ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 3 LIMIT 1[0m
+  Rendered show_times/index.html.erb within layouts/showtime (20.1ms)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:57:15 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (8.2ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:57:18 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (8.5ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:57:23 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (7.6ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/show_times" for ::1 at 2017-09-07 11:57:26 -0700
+Processing by ShowTimesController#index as HTML
+  Rendering show_times/index.html.erb within layouts/showtime
+  [1m[36mShowTime Load (0.3ms)[0m  [1m[34mSELECT `show_times`.* FROM `show_times`[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 4 LIMIT 1[0m
+  [1m[36mTheatre Load (0.2ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 2 LIMIT 1[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 5 LIMIT 1[0m
+  [1m[36mTheatre Load (0.2ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 3 LIMIT 1[0m
+  Rendered show_times/index.html.erb within layouts/showtime (6.7ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:57:27 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (8.2ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:57:51 -0700
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:6)
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (25.3ms)
+Completed 200 OK in 35ms (Views: 28.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 11:57:52 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/movie
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/movie (14.1ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/show_times" for ::1 at 2017-09-07 11:57:54 -0700
+Processing by ShowTimesController#index as HTML
+  Rendering show_times/index.html.erb within layouts/movie
+  [1m[36mShowTime Load (0.3ms)[0m  [1m[34mSELECT `show_times`.* FROM `show_times`[0m
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 4 LIMIT 1[0m
+  [1m[36mTheatre Load (0.2ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 2 LIMIT 1[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 5 LIMIT 1[0m
+  [1m[36mTheatre Load (0.2ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 3 LIMIT 1[0m
+  Rendered show_times/index.html.erb within layouts/movie (13.9ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:57:58 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (8.1ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 11:58:14 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/movie
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/movie (7.2ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_times" for ::1 at 2017-09-07 11:58:19 -0700
+Processing by ShowTimesController#index as HTML
+  Rendering show_times/index.html.erb within layouts/movie
+  [1m[36mShowTime Load (0.3ms)[0m  [1m[34mSELECT `show_times`.* FROM `show_times`[0m
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 4 LIMIT 1[0m
+  [1m[36mTheatre Load (0.2ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 2 LIMIT 1[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 5 LIMIT 1[0m
+  [1m[36mTheatre Load (0.2ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 3 LIMIT 1[0m
+  Rendered show_times/index.html.erb within layouts/movie (6.7ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 11:58:20 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/movie
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/movie (6.8ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:58:25 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (7.8ms)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 11:58:50 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/movie
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/movie (7.1ms)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/show_times" for ::1 at 2017-09-07 11:58:52 -0700
+Processing by ShowTimesController#index as HTML
+  Rendering show_times/index.html.erb within layouts/movie
+  [1m[36mShowTime Load (0.3ms)[0m  [1m[34mSELECT `show_times`.* FROM `show_times`[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 4 LIMIT 1[0m
+  [1m[36mTheatre Load (0.2ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 2 LIMIT 1[0m
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 5 LIMIT 1[0m
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 3 LIMIT 1[0m
+  Rendered show_times/index.html.erb within layouts/movie (7.1ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 11:58:54 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (8.2ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 12:01:01 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (7.7ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 12:01:03 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/movie
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/movie (6.8ms)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/show_times" for ::1 at 2017-09-07 12:01:05 -0700
+Processing by ShowTimesController#index as HTML
+  Rendering show_times/index.html.erb within layouts/movie
+  [1m[36mShowTime Load (0.4ms)[0m  [1m[34mSELECT `show_times`.* FROM `show_times`[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 4 LIMIT 1[0m
+  [1m[36mTheatre Load (0.2ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 2 LIMIT 1[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 5 LIMIT 1[0m
+  [1m[36mTheatre Load (0.2ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 3 LIMIT 1[0m
+  Rendered show_times/index.html.erb within layouts/movie (6.7ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 12:01:10 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/movie
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/movie (6.9ms)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/theatres/show:/id?id=2" for ::1 at 2017-09-07 12:01:12 -0700
+Processing by TheatresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 2 LIMIT 1[0m
+  Rendering theatres/show.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  Rendered theatres/show.html.erb within layouts/movie (3.7ms)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 12:01:14 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/movie
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/movie (6.8ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/theatres/new:/id" for ::1 at 2017-09-07 12:01:15 -0700
+Processing by TheatresController#new as HTML
+  Rendering theatres/new.html.erb within layouts/movie
+  Rendered theatres/_form.html.erb (1.5ms)
+  Rendered theatres/new.html.erb within layouts/movie (4.0ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 12:01:16 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/movie
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/movie (7.4ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/theatres/edit:/id?id=2" for ::1 at 2017-09-07 12:01:18 -0700
+Processing by TheatresController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 2 LIMIT 1[0m
+  Rendering theatres/edit.html.erb within layouts/movie
+  Rendered theatres/_form.html.erb (1.0ms)
+  Rendered theatres/edit.html.erb within layouts/movie (3.6ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 12:01:19 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/movie
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/movie (6.6ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 12:01:43 -0700
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:6)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:6)
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/movie
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/movie (25.4ms)
+Completed 200 OK in 36ms (Views: 27.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/show_times" for ::1 at 2017-09-07 12:01:44 -0700
+Processing by ShowTimesController#index as HTML
+  Rendering show_times/index.html.erb within layouts/movie
+  [1m[36mShowTime Load (0.3ms)[0m  [1m[34mSELECT `show_times`.* FROM `show_times`[0m
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 4 LIMIT 1[0m
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 2 LIMIT 1[0m
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  `movies`.* FROM `movies` WHERE `movies`.`id` = 5 LIMIT 1[0m
+  [1m[36mTheatre Load (0.2ms)[0m  [1m[34mSELECT  `theatres`.* FROM `theatres` WHERE `theatres`.`id` = 3 LIMIT 1[0m
+  Rendered show_times/index.html.erb within layouts/movie (22.5ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 12:01:44 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/movie
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/movie (6.9ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 12:01:46 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (8.7ms)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 12:02:25 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (8.0ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root' for #<#<Class:0x007fb8cfdbef68>:0x007fb8d13f15d8>):
+    27:         <!-- Collect the nav links, forms, and other content for toggling -->
+    28:         <div class="collapse navbar-collapse" id="navbar-collapse-3">
+    29:           <ul class="nav navbar-nav navbar-left">
+    30:             <li><%= link_to('Home', root) %></li>
+    31:             <li><%= link_to('Theaters', {controller: 'theatres', action: 'index'}) %></li>
+    32:             <li><%= link_to("ShowTimes", {:controller => 'show_times', :action => 'index'}) %></li>
+    33:           </ul>
+  
+app/views/layouts/movie.html.erb:30:in `_app_views_layouts_movie_html_erb__1848975704044909064_70215852226420'
+Started GET "/" for ::1 at 2017-09-07 12:02:53 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (8.1ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 12:02:55 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (8.1ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/theatres" for ::1 at 2017-09-07 12:02:56 -0700
+Processing by TheatresController#index as HTML
+  Rendering theatres/index.html.erb within layouts/movie
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres` ORDER BY `theatres`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `movies` INNER JOIN `show_times` ON `movies`.`id` = `show_times`.`movie_id` WHERE `show_times`.`theatre_id` = 3[0m
+  Rendered theatres/index.html.erb within layouts/movie (7.0ms)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 12:02:57 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (8.2ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 12:03:10 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (7.6ms)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-09-07 12:03:21 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/movie
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 4[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 6[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 5[0m
+  Rendered movies/index.html.erb within layouts/movie (7.8ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 1.2ms)
+
+
