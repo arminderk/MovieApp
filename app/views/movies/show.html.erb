@@ -41,6 +41,12 @@
     
 </table><br>
 
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% elsif alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
 <div class="page-header">
   <h3>All Comments</h3>
 </div>

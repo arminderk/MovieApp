@@ -2,9 +2,13 @@ class CommentsController < ApplicationController
   
   def create
     @comment = Comment.new(comment_params)
+    @movie = Movie.find(comment_params[:movie_id])
     if @comment.save
-      @movie = Movie.find(comment_params[:movie_id])
       redirect_to(:controller => 'movies', :action => 'show', :id => @movie.id)
+      flash[:notice] = "Comment added"
+    else
+      redirect_to(:controller => 'movies', :action => 'show', :id => @movie.id)
+      flash[:alert] = @comment.errors.messages
     end
   end
   
