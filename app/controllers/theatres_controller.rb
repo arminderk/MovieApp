@@ -3,51 +3,51 @@ class TheatresController < ApplicationController
   layout "movie"
   
   def index
-    @theaters = Theatre.order(:name)
+    @theatres = Theatre.order(:name)
   end
   
   def show
-    @theater = Theatre.find(params[:id])
-    @movies = @theater.movies
+    @theatre = Theatre.find(params[:id])
+    @movies = @theatre.movies
   end
 
   def new
-    @theater = Theatre.new
+    @theatre = Theatre.new
   end
   
   def create
-    @theater = Theatre.new(theater_params)
-    if @theater.save
-      redirect_to(:action => 'index')
+    @theatre = Theatre.new(theatre_params)
+    if @theatre.save
+      redirect_to(theatres_path)
     else
       render 'new'
     end
   end
 
   def edit
-    @theater = Theatre.find(params[:id])
+    @theatre = Theatre.find(params[:id])
   end
   
   def update
-    @theater = Theatre.find(params[:id])
-    if @theater.update_attributes(theater_params)
-      redirect_to(:action => 'show', :id => @theater.id)
+    @theatre = Theatre.find(params[:id])
+    if @theatre.update_attributes(theatre_params)
+      redirect_to(theatre_path(id: @theatre.id))
     else
       render('edit')
     end
   end
 
   def delete
-    @theater = Theatre.find(params[:id])
+    @theatre = Theatre.find(params[:id])
   end
   
   def destroy
-    theater = Theatre.find(params[:id]).destroy
-    redirect_to(:action => 'index')
+    @theatre = Theatre.find(params[:id]).destroy
+    redirect_to(theatres_path)
   end
   
   private
-    def theater_params
-      params.require(:theater).permit(:name, :price)
+    def theatre_params
+      params.require(:theatre).permit(:name, :price)
     end
 end

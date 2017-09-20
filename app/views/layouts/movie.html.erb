@@ -28,8 +28,8 @@
         <div class="collapse navbar-collapse" id="navbar-collapse-3">
           <ul class="nav navbar-nav navbar-left">
             <li><%= link_to('Home', root_path) %></li>
-            <li><%= link_to('Theaters', {controller: 'theatres', action: 'index'}) %></li>
-            <li><%= link_to("ShowTimes", {:controller => 'show_times', :action => 'index'}) %></li>
+            <li><%= link_to('Theaters', theatres_path) %></li>
+            <li><%= link_to("ShowTimes", show_times_path) %></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>

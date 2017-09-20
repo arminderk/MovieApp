@@ -12,16 +12,16 @@
     </tr>
   </thead>
   <tbody>
-    <% @theaters.each_with_index  do |theater, index| %>
+    <% @theatres.each_with_index  do |theatre, index| %>
     <tr>
       <th scope="row"><%= index + 1 %></th>
-      <td><%= theater.name %></td>
-      <td><%= number_to_currency(theater.price) %></td>
-      <td><%= theater.movies.size %></td>
+      <td><%= theatre.name %></td>
+      <td><%= number_to_currency(theatre.price) %></td>
+      <td><%= theatre.movies.size %></td>
       <td class="actions">
-        <%= link_to("Show", {:action => 'show', :id => theater.id}, :class => 'action show') %>
-        <%= link_to("Edit", {:action => 'edit', :id => theater.id}, :class => 'action edit') %>
-        <%= link_to("Delete", {:action => 'delete', :id => theater.id}, :class => 'action delete') %>
+        <%= link_to("Show", theatre_path(id: theatre.id), :class => 'action show') %>
+        <%= link_to("Edit", edit_theatre_path(id: theatre.id), :class => 'action edit') %>
+        <%= link_to("Delete", {:action => 'delete', :id => theatre.id}, :class => 'action delete') %>
       </td>
     </tr>
     <% end %>
@@ -32,6 +32,6 @@
 
 <br><br>
 
-<%= link_to("Back to Movies", {:controller => 'movies', :action => 'index'}) %>
+<%= link_to("Back to Movies", movies_path) %>
 
 

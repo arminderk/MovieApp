@@ -1,13 +1,13 @@
 <% @page_title = "Edit" %>
 <% @page_header = "Update Movie" %>
       
-<%= form_for(:movie, :url => ({:action => 'update', :id => @movie.id})) do |t| %>
+<%= form_for(@movie) do |t| %>
 
   <%= render(:partial => 'form', :locals => {:t => t}) %>
 
   <%= t.submit("Submit Movie", :class => 'btn btn-success') %><br><br>
 
-  <%= link_to("Back to Index", {:action => 'index'}, :class => 'back-index') %>
+  <%= link_to("Back to Index", movies_path, :class => 'back-index') %>
 
 <% end %>
 

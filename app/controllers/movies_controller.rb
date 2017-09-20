@@ -51,7 +51,9 @@ class MoviesController < ApplicationController
   end
   
   def destroy
-    movie = Movie.find(params[:id]).destroy
+    @movie = Movie.find(params[:id])
+    @movie.show_times.destroy_all
+    @movie.destroy
     redirect_to(:action => 'index')
   end
   

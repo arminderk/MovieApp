@@ -4,11 +4,11 @@
 <table class="table table-bordered table-responsive">
     <tr>
       <th>Name</th>
-      <td><%= @theater.name %></td>
+      <td><%= @theatre.name %></td>
     </tr>
     <tr>
       <th>Price</th>
-      <td><%= @theater.price %></td>
+      <td><%= @theatre.price %></td>
     </tr>
     <tr>
       <th>Now Playing</th>
@@ -20,13 +20,13 @@
     </tr>
     <tr>
       <th>Created At</th>
-      <td><%= @theater.created_at %></td>
+      <td><%= @theatre.created_at %></td>
     </tr>
     <tr>
       <th>Updated At</th>
-      <td><%= @theater.updated_at %></td>
+      <td><%= @theatre.updated_at %></td>
     </tr>
     
 </table><br>
 
-<%= link_to("Back to Index", {:action => 'index'}, :class => 'back-index') %>
+<%= link_to("Back to Index", theatres_path, :class => 'back-index') %>

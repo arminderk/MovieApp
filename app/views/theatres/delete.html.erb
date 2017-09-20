@@ -1,12 +1,12 @@
 <% @page_title = "Delete" %>
 <% @page_header = "Delete Theater" %>
       
-<%= form_for(:theatre, :url => ({:action => 'destroy', :id => @theater.id})) do |t| %>
+<%= form_for(@theatre, method: :delete) do |t| %>
 
-<h4 class="text-danger">Are you sure you want to delete theater: <%= @theater.name %>?</h4><br>
+<h4 class="text-danger">Are you sure you want to delete theater: <%= @theatre.name %>?</h4><br>
 
   <%= t.submit("Delete Theater", :class => 'btn btn-success') %><br><br>
 
-  <%= link_to("Back to Index", {:action => 'index'}, :class => 'back-index') %>
+  <%= link_to("Back to Index", theatres_path, :class => 'back-index') %>
 
 <% end %>

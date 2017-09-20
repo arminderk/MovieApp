@@ -22,8 +22,8 @@
       <td><%= movie.rated %></td>
       <td><%= movie.theatres.size %></td>
       <td class="actions">
-        <%= link_to("Show", {:action => 'show', :id => movie.id}, :class => 'action show') %>
-        <%= link_to("Edit", {:action => 'edit', :id => movie.id}, :class => 'action edit') %>
+        <%= link_to("Show", movie_path(id: movie.id), :class => 'action show') %>
+        <%= link_to("Edit", edit_movie_path(id: movie.id), :class => 'action edit') %>
         <%= link_to("Delete", {:action => 'delete', :id => movie.id}, :class => 'action delete') %>
       </td>
     </tr>
@@ -31,4 +31,4 @@
   </tbody>
 </table><br>
 
-<%= link_to("Add New Movie", {:action => 'new'}, :class => 'btn btn-success') %>
+<%= link_to("Add New Movie", new_movie_path, :class => 'btn btn-success') %>
