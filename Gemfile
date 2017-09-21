@@ -9,6 +9,9 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # Sass Rails
 gem 'sass-rails', '~> 5.0'
 
+# JQuery
+gem 'jquery-rails'
+
 # Use Puma as the app server
 #gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -31,6 +34,8 @@ gem 'sass-rails', '~> 5.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Devise for User login
+gem 'devise', '~> 4.3.0'
 
 #Use Money Gem
 gem 'money-rails', '~>1'

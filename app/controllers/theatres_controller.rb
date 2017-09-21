@@ -1,6 +1,7 @@
 class TheatresController < ApplicationController
   
-  layout "movie"
+  before_action :authenticate_user!, except: [:index, :show]
+  layout "application"
   
   def index
     @theatres = Theatre.order(:name)
