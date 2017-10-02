@@ -30,21 +30,17 @@ Rails.application.configure do
   
   # Mailer set up for Devise
   config.action_mailer.perform_deliveries = true
-  
   config.action_mailer.raise_delivery_errors = true
-  
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
-  
+  config.action_mailer.default_url_options = { host: ENV['MAIL_HOST'] }
   config.action_mailer.delivery_method = :smtp
-  
   config.action_mailer.smtp_settings = {
-    domain:         'localhost:3000',
-    address:       'smtp.gmail.com',
-    port:          '587',
-    authentication: :plain,
-    enable_starttls_auto: true
+    enable_starttls_auto: true,
+    address: 'smtp.gmail.com',
+    port: 587,
+    authentication: 'plain',
+    user_name: ENV['MAIL_USERNAME'],
+    password: ENV['MAIL_PASSWORD']
   }
-  
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
