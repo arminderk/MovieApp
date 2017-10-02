@@ -7,4 +7,5 @@
 /log/*
 /tmp/*
 !/log/.keep
-!/tmp/.keepconfig/app_env_vars.rb
+!/tmp/.keep
+config/app_env_vars.rb
