@@ -53,11 +53,11 @@ Theatre.destroy_all
 
 Theatre.create!([{
   name: "Pacific",
-  price_cents: "12.95"
+  price: "12.95"
 },
 {
   name: "AMC",
-  price_cents: "14.95"
+  price: "14.95"
 },
 {
   name: "Regency",
