@@ -48,3 +48,18 @@ Movie.create!([{
   genre: "Drama/Thriller",
   description: "In May 1940, Germany advanced into France, trapping Allied troops on the beaches of Dunkirk."
 }])
+
+Theatre.destroy_all
+
+Theatre.create!([{
+  name: "Pacific",
+  price_cents: "12.95"
+},
+{
+  name: "AMC",
+  price_cents: "14.95"
+},
+{
+  name: "Regency",
+  price: "13.95"
+}])

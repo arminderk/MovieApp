@@ -17335,3 +17335,120 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 1.8ms)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:15)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:15)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:15)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:15)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:15)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:15)
+Started GET "/" for ::1 at 2017-10-04 16:20:42 -0700
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 21[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 19[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 20[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 18[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 17[0m
+  Rendered movies/index.html.erb within layouts/application (53.6ms)
+  Rendered devise/nav/_nav_display.html.erb (13.9ms)
+Completed 200 OK in 310ms (Views: 297.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/" for ::1 at 2017-10-04 16:20:43 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 21[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 19[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 20[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 18[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 17[0m
+  Rendered movies/index.html.erb within layouts/application (29.9ms)
+  Rendered devise/nav/_nav_display.html.erb (0.9ms)
+Completed 200 OK in 74ms (Views: 52.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2017-10-04 16:20:43 -0700
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+Started GET "/" for ::1 at 2017-10-04 16:20:43 -0700
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (2.7ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  Rendering movies/index.html.erb within layouts/application
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 21[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 19[0m
+  [1m[35m (2.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 20[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 18[0m
+  [1m[36mMovie Load (2.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies` ORDER BY `movies`.`name` ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 17[0m
+  Rendered movies/index.html.erb within layouts/application (33.1ms)
+  Rendered devise/nav/_nav_display.html.erb (0.8ms)
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 21[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 19[0m
+Completed 200 OK in 46ms (Views: 36.2ms | ActiveRecord: 8.0ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 20[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 18[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `theatres` INNER JOIN `show_times` ON `theatres`.`id` = `show_times`.`theatre_id` WHERE `show_times`.`movie_id` = 17[0m
+  Rendered movies/index.html.erb within layouts/application (29.8ms)
+  Rendered devise/nav/_nav_display.html.erb (1.0ms)
+Completed 200 OK in 43ms (Views: 28.4ms | ActiveRecord: 12.2ms)
+
+
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:15)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:15)
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:15)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 5.2. (called from block in <top (required)> at /Users/arminderk/Desktop/CRUDMovieApp/config/routes.rb:15)
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT `movies`.* FROM `movies`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM `movies` WHERE `movies`.`id` = 17[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `movies` WHERE `movies`.`id` = 18[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `movies` WHERE `movies`.`id` = 19[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `movies` WHERE `movies`.`id` = 20[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `movies` WHERE `movies`.`id` = 21[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `movies` (`name`, `rated`, `year`, `director`, `genre`, `description`, `created_at`, `updated_at`) VALUES ('Wonder Woman', 'PG-13', 2017, 'Patty Jenkins', 'Action', 'Before she was Wonder Woman (Gal Gadot), she was Diana, princess of the Amazons, trained to be an unconquerable warrior.', '2017-10-04 23:23:46', '2017-10-04 23:23:46')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `movies` (`name`, `rated`, `year`, `director`, `genre`, `description`, `created_at`, `updated_at`) VALUES ('Spider-Man: Homecoming', 'PG-13', 2017, 'Jon Watts', 'Fantasy/Science', 'Thrilled by his experience with the Avengers, young Peter Parker returns home to live with his Aunt May.', '2017-10-04 23:23:46', '2017-10-04 23:23:46')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `movies` (`name`, `rated`, `year`, `director`, `genre`, `description`, `created_at`, `updated_at`) VALUES ('Get Out', 'R', 2017, 'Jordan Peele', 'Mystery/Thriller', 'Now that Chris (Daniel Kaluuya) and his girlfriend, Rose (Allison Williams), have reached the meet-the-parents milestone of dating.', '2017-10-04 23:23:46', '2017-10-04 23:23:46')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `movies` (`name`, `rated`, `year`, `director`, `genre`, `description`, `created_at`, `updated_at`) VALUES ('Logan', 'R', 2017, 'James Mangold', 'Action', 'In the near future, a weary Logan (Hugh Jackman) cares for an ailing Professor X (Patrick Stewart) at a remote outpost on the Mexican border.', '2017-10-04 23:23:46', '2017-10-04 23:23:46')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `movies` (`name`, `rated`, `year`, `director`, `genre`, `description`, `created_at`, `updated_at`) VALUES ('Dunkirk', 'PG-13', 2017, 'Christopher Nolan', 'Drama/Thriller', 'In May 1940, Germany advanced into France, trapping Allied troops on the beaches of Dunkirk.', '2017-10-04 23:23:46', '2017-10-04 23:23:46')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTheatre Load (0.3ms)[0m  [1m[34mSELECT `theatres`.* FROM `theatres`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM `theatres` WHERE `theatres`.`id` = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `theatres` (`name`, `price_cents`, `created_at`, `updated_at`) VALUES ('Pacific', 12, '2017-10-04 23:23:46', '2017-10-04 23:23:46')[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `theatres` (`name`, `price_cents`, `created_at`, `updated_at`) VALUES ('AMC', 14, '2017-10-04 23:23:46', '2017-10-04 23:23:46')[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `theatres` (`name`, `price_cents`, `created_at`, `updated_at`) VALUES ('Regency', 1395, '2017-10-04 23:23:46', '2017-10-04 23:23:46')[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
