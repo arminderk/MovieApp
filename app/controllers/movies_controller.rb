@@ -4,6 +4,7 @@ class MoviesController < ApplicationController
   
   def index
     @movies = Movie.order(:name)
+    @genreMovies = Movie.where(genre: params[:genre])
   end
 
   def show

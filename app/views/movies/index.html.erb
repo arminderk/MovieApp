@@ -4,6 +4,17 @@
 <br>
 
 <!------------ Start Movie Index ------------>
+<h3>Filter By Genre</h3>
+<%= form_tag(movies_path, method: :get) do %>
+  <%= select_tag(:genre, options_for_select(getAllGenres, params[:genre]), {prompt: "--- Select Genre ---", onChange: 'this.form.submit();'}) %>
+<% end %>
+
+<% @genreMovies.each do |gm| %>
+  <h3><%= gm.name %></h3>
+<% end %>
+
+<br><br>
+
 <table class="table table-bordered table-responsive">
   <thead>
     <tr class="bg-primary">
