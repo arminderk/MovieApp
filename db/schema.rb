@@ -28,7 +28,8 @@ ActiveRecord::Schema.define(version: 20170921195244) do
     t.integer "year"
     t.string "director"
     t.string "genre"
-    t.string "description", limit: 150
+    t.string "description", limit: 200
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,7 +1,7 @@
 module MoviesHelper
   
   def getAllGenres
-    @genre =  Movie.all.pluck(:genre)
+    @genres =  Movie.all.pluck('DISTINCT genre')
   end
   
 end

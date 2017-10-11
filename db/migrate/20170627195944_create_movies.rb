@@ -6,7 +6,8 @@ class CreateMovies < ActiveRecord::Migration[5.1]
       t.integer "year"
       t.string "director"
       t.string "genre"
-      t.string "description", :limit => 150
+      t.string "description", :limit => 200
+      t.string "image"
 
       t.timestamps
     end

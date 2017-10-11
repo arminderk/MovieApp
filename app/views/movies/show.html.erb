@@ -31,12 +31,8 @@
       <td><%= @movie.theatres.size %> </td>
     </tr>
     <tr>
-      <th>Created At</th>
-      <td><%= @movie.created_at %></td>
-    </tr>
-    <tr>
-      <th>Updated At</th>
-      <td><%= @movie.updated_at %></td>
+      <th>Image</th>
+      <td><%= image_tag(asset_path(@movie.image), size: "250x250") %></td>
     </tr>
     
 </table><br>
