@@ -4,7 +4,7 @@
 </div>
 <div class="form-group">
   <label><%= t.label(:rated) %></label><br>
-  <%= t.select(:rated, [['G'], ['PG'], ['PG-13'], ['R']], :class => "form-control") %>
+  <%= t.select(:rated, [['G'], ['PG'], ['PG-13'], ['R']], {:prompt => "-- Select Rated --", :class => "form-control"}) %>
 </div>
 <div class="form-group">
   <label><%= t.label(:genre, "Genre") %></label>
@@ -12,7 +12,7 @@
 </div>
 <div class="form-group">
   <label><%= t.label(:year) %></label><br>
-  <%= t.number_field :year, value: 1940, class: "form-control", min: 1940, max: 2017 %>
+  <%= t.select(:year, (1970..2017), {:prompt => "-- Select Year --", :class => "form-control"}) %>
 </div>
 <div class="form-group">
   <label><%= t.label(:director, "Director") %></label>

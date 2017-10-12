@@ -3,6 +3,14 @@
       
 <%= form_for(@movie) do |t| %>
 
+  <% if @movie.errors.any? %>
+    <ul>
+      <% @movie.errors.full_messages.each do |message| %>
+        <li class="alert alert-danger"><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
   <%= render(:partial => 'form', :locals => {:t => t}) %>
 
   <%= t.submit("Submit Movie", :class => 'btn btn-success') %><br><br>

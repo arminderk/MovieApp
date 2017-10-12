@@ -3,6 +3,14 @@
       
 <%= form_for(@theatre) do |t| %>
 
+  <% if @theatre.errors.any? %>
+    <% @theatre.errors.full_messages.each do |message| %>
+      <ul>
+        <li class="alert alert-danger"><%= message %></li>
+      </ul>
+    <% end %>
+  <% end %>
+
   <%= render(:partial => 'form', :locals => {:t => t}) %>
 
   <%= t.submit("Submit Theater", :class => 'btn btn-success') %><br><br>

@@ -7,42 +7,40 @@
 <h3>Filter By Genre</h3>
 <%= form_tag(movies_path, method: :get) do %>
   <%= select_tag(:genre, options_for_select(getAllGenres, params[:genre]), {prompt: "--- Select Genre ---", onChange: 'this.form.submit();'}) %>
+
+  <br><br>
+
+  <table class="table table-responsive">
+    <thead>
+      <tr class="bg-primary">
+        <th>#</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Rated</th>
+        <th>Theaters</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @movies.each_with_index  do |movie, index| %>
+      <tr>
+        <th scope="row"><%= index + 1 %></th>
+        <% if movie.image != nil %>
+          <td><%= image_tag(asset_path(movie.image), size: "175x175") %></td>
+        <% end %>
+        <td><%= movie.name %></td>
+        <td><%= movie.rated %></td>
+        <td><%= movie.theatres.size %></td>
+        <td class="actions">
+          <%= link_to("Show", movie_path(id: movie.id), :class => 'action show') %>
+          <%= link_to("Edit", edit_movie_path(id: movie.id), :class => 'action edit') %>
+          <%= link_to("Delete", {:action => 'delete', :id => movie.id}, :class => 'action delete') %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 <% end %>
-
-<% @genreMovies.each do |gm| %>
-  <h3><%= gm.name %></h3>
-<% end %>
-
-<br><br>
-
-<table class="table table-bordered table-responsive">
-  <thead>
-    <tr class="bg-primary">
-      <th>#</th>
-      <th>Image</th>
-      <th>Name</th>
-      <th>Rated</th>
-      <th>Theaters</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @movies.each_with_index  do |movie, index| %>
-    <tr>
-      <th scope="row"><%= index + 1 %></th>
-      <td><%= image_tag(asset_path(movie.image), size: "175x175") %></td>
-      <td><%= movie.name %></td>
-      <td><%= movie.rated %></td>
-      <td><%= movie.theatres.size %></td>
-      <td class="actions">
-        <%= link_to("Show", movie_path(id: movie.id), :class => 'action show') %>
-        <%= link_to("Edit", edit_movie_path(id: movie.id), :class => 'action edit') %>
-        <%= link_to("Delete", {:action => 'delete', :id => movie.id}, :class => 'action delete') %>
-      </td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
 
 <br>
 

@@ -4,8 +4,11 @@ class MoviesController < ApplicationController
   before_action :authenticate_user!, only: [:delete]
   
   def index
-    @movies = Movie.order(:name)
-    @genreMovies = Movie.where(genre: params[:genre])
+    if params[:genre].present?
+      @movies = Movie.where(genre: params[:genre])
+    else
+      @movies = Movie.order(:name)
+    end
   end
 
   def show
