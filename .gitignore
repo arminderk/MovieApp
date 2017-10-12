@@ -9,5 +9,4 @@ log/development.log
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-config/app_env_vars.rb
 
