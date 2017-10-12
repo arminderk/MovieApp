@@ -10,4 +10,4 @@ log/development.log
 !/log/.keep
 !/tmp/.keep
 config/app_env_vars.rb
-config/database.yml
+
