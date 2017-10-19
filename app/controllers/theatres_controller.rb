@@ -1,6 +1,7 @@
 class TheatresController < ApplicationController
   
   layout "application"
+  before_action :authenticate_user!, only: [:delete]
   
   def index
     @theatres = Theatre.order(:name)
