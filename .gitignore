@@ -9,6 +9,3 @@ log/development.log
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-config/database.yml
-config/app_env_vars.rb
-
