@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
   
   layout "application"
-  before_action :authenticate_user!, only: [:delete]
+  
   
   def index
     if params[:genre].present?
@@ -57,7 +57,6 @@ class MoviesController < ApplicationController
   
   def destroy
     @movie = Movie.find(params[:id])
-    @movie.show_times.destroy_all
     @movie.destroy
     redirect_to(:action => 'index')
   end

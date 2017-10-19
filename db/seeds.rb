@@ -58,13 +58,16 @@ Theatre.destroy_all
 
 Theatre.create!([{
   name: "Pacific",
-  price: "12.95"
+  price: "12.95",
+  movies: Movie.where(name: "Wonder Woman")
 },
 {
   name: "AMC",
-  price: "14.95"
+  price: "14.95",
+  movies: Movie.where(name: "Get Out")
 },
 {
   name: "Regency",
-  price: "13.95"
+  price: "13.95",
+  movies: Movie.where(name: "Dunkirk")
 }])

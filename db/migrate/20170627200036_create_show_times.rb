@@ -3,7 +3,7 @@ class CreateShowTimes < ActiveRecord::Migration[5.1]
     create_table :show_times do |t|
       t.integer "movie_id"
       t.integer "theatre_id"
-      t.datetime 'datetime'
+      t.datetime 'datetime', :default => Time.now
       
       t.timestamps
     end
