@@ -13,3 +13,5 @@
 * Users can sign up/sign in to the app, and this is achieved by using the Devise Gem
 
 * There is also a "Filter by Genre" feature which allows users to filter the movies by a specific genre
+
+* Click on the link to see a demo of the app: https://crud-movie-app.herokuapp.com
