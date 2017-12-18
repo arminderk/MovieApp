@@ -1,4 +1,4 @@
-# The CRUD Movie App
+# The Movie App
 
 * This is a Ruby on Rails app which was developed to get used to the framework and understand the CRUD concept.
 
