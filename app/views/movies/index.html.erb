@@ -10,38 +10,25 @@
 
   <br><br>
 
-  <table class="table table-responsive">
-    <thead>
-      <tr class="bg-primary">
-        <th>#</th>
-        <th>Image</th>
-        <th>Name</th>
-        <th>Rated</th>
-        <th>Theaters</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @movies.each_with_index  do |movie, index| %>
-      <tr>
-        <th scope="row"><%= index + 1 %></th>
-        <% if movie.image != nil %>
-          <td><%= image_tag(asset_path(movie.image), size: "175x175") %></td>
-        <% end %>
-        <td><%= movie.name %></td>
-        <td><%= movie.rated %></td>
-        <td><%= movie.theatres.size %></td>
-        <td class="actions">
-          <%= link_to("Show", movie_path(id: movie.id), :class => 'action show') %>
-          <%= link_to("Edit", edit_movie_path(id: movie.id), :class => 'action edit') %>
-          <%= link_to("Delete", {:action => 'delete', :id => movie.id}, :class => 'action delete') %>
-        </td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <% @movies.each do |movie| %>
+    <div class="row">
+      <div class="thumbnail">
+        <div class="caption">
+          <% if movie.image != nil %>
+            <%= image_tag(asset_path(movie.image), width: "100%", height: "400px") %>
+          <% end %>
+          <br><br>
+          <h4><%= movie.name %></h4>
+          <p><%= movie.description %></p>
+          <br>
+          <%= link_to("Show", movie_path(id: movie.id), :class => 'btn btn-primary') %>
+          <%= link_to("Edit", edit_movie_path(id: movie.id), :class => 'btn btn-warning') %>
+          <%= link_to("Delete", {:action => 'delete', :id => movie.id}, :class => 'btn btn-danger') %>
+        </div>
+      </div>
+    </div>
+    <br>
+  <% end %>
 <% end %>
-
-<br>
 
 <%= link_to("Add New Movie", new_movie_path, :class => 'btn btn-success') %>

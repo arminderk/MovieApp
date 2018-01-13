@@ -1,6 +1,8 @@
 <% @page_title = "Show" %>
 <% @page_header = "Show Movie" %>
 
+<br>
+
 <table class="table table-bordered table-responsive">
     <tr>
       <th>Name</th>
@@ -29,10 +31,6 @@
     <tr>
       <th>Number of Theatres Movie is Playing In </th>
       <td><%= @movie.theatres.size %> </td>
-    </tr>
-    <tr>
-      <th>Image</th>
-      <td><%= image_tag(asset_path(@movie.image), size: "250x250") %></td>
     </tr>
     
 </table><br>
