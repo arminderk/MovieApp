@@ -10,7 +10,15 @@ module Demo
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
-
+    config.before_configuration do
+      env_file = Rails.root.join("config", 'local_env.yml').to_s
+      if File.exists?(env_file)
+        YAML.load(File.open(env_file)).each do |key, value|
+          ENV[key.to_s] = value
+        end # end YAML.load_file
+      end # end if File.exists?
+    end # end config.before_configuration
+    
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
