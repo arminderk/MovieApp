@@ -6,9 +6,6 @@ gem 'rails', '~> 5.1.1'
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 # Boostrap Sass
 gem 'bootstrap-sass', '~> 3.3.6'
-# Sass Rails
-gem 'sass-rails', '~> 5.0'
-
 # JQuery
 gem 'jquery-rails'
 
