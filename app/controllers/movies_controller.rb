@@ -7,6 +7,11 @@ class MoviesController < ApplicationController
   def index
     if params[:genre].present?
       @movies = Movie.where(genre: params[:genre])
+
+      respond_to do |format|
+        format.json {render json: @movies}
+      end
+
     else
       @movies = Movie.order(:name)
     end
