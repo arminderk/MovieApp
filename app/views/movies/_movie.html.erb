@@ -1,0 +1,19 @@
+<% @movies.each do |movie| %>
+    <div class="row">
+        <div class="thumbnail">
+            <div class="caption">
+            <% if movie.image != nil %>
+                <%= image_tag(asset_path(movie.image), width: "100%", height: "400px") %>
+            <% end %>
+            <br><br>
+            <h4><%= movie.name %></h4>
+            <p><%= movie.description %></p>
+            <br>
+            <%= link_to("Show", movie_path(id: movie.id), :class => 'btn btn-primary') %>
+            <%= link_to("Edit", edit_movie_path(id: movie.id), :class => 'btn btn-warning') %>
+            <%= link_to("Delete", {:action => 'delete', :id => movie.id}, :class => 'btn btn-danger') %>
+            </div>
+        </div>
+    </div>
+    <br>
+<% end %>

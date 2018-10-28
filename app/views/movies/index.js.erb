@@ -1,0 +1,2 @@
+$('#all_movies').empty();
+$('#all_movies').append('<%= j render partial: 'movie', locals: { movies: @movies } %>')

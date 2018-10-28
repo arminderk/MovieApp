@@ -9,7 +9,7 @@ class MoviesController < ApplicationController
       @movies = Movie.where(genre: params[:genre])
 
       respond_to do |format|
-        format.json {render json: @movies}
+        format.js {}
       end
 
     else
