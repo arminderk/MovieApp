@@ -5,7 +5,7 @@ gem 'rails', '~> 5.1.1'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.3.18', '< 0.5'
 # Boostrap Sass
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 # JQuery
 gem 'jquery-rails'
 
