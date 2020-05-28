@@ -32,7 +32,7 @@ gem 'jquery-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # Devise for User login
-gem 'devise', '~> 4.3.0'
+gem 'devise', '~> 4.7.1'
 
 #Use Money Gem
 gem 'money-rails', '~>1'
